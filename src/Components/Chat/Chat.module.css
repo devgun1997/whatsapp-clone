@@ -90,7 +90,28 @@
     display: none;
 }
 
-.chat__footer > .MuiSvgIcon-root {
-    padding: 10px;
-    color: gray;
+.chat__footer > svg:global(.MuiSvgIcon-root) {
+    padding: 10px !important;
+    color: gray !important;
+}
+
+.chat__status > svg:global(.MuiSvgIcon-root) {
+    font-size: 15px;
+    margin-bottom: -3px;
+    margin-left: 5px;
+}
+
+.chat__mobileBackButton {
+    display: none;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .chat{
+        flex: 1;
+    }
+    .chat__mobileBackButton{
+        display: flex;
+        margin-left: -10px;
+        margin-right: 10px;
+    }
 }

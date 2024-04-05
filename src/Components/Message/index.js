@@ -5,12 +5,8 @@ const Message = ({ notification }) => {
         <>
             <div className={styles.notificationHeader}>
                 {/* image is optional */}
-                {notification.image && (
-                    <div className={styles.imageContainer}>
-                        <img src={notification.image} width={100} />
-                    </div>
-                )}
-                <span>{notification.title}</span>
+                <span><h3>{notification.senderUser}</h3></span>
+                <span>{notification.message}</span>
             </div>
             <div className={styles.notificationBody}>{notification.body}</div>
         </>
